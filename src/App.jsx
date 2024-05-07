@@ -32,7 +32,9 @@ function App() {
         React Calculator
       </h3>
       <input value={data} className='display' type='text' readOnly></input>
-      {result}
+      {result?(
+        <input type='text' className='display' value={result} readOnly/>
+      ):""}
       <div className='container'>
         <div className='row'>
           <input type='button' onClick={handleChange} value='7' className='button'/>
